@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/backgroung_screen"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.FormDataFragment">
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroung_screen"
+        tools:context=".FormDataActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_layaout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInputLayout_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.011">
+
+                    <EditText
+                        android:id="@+id/editText_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:hint="@string/str_name"
+                        android:textColorHint="@color/white_letter"
+                        android:inputType="textPersonName"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInputLayout_surname"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout_name">
+
+                    <EditText
+                        android:id="@+id/editText_surname"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:hint="@string/str_surname"
+                        android:textColorHint="@color/white_letter"
+                        android:inputType="textPersonName"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInputLayout_surname2"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textInputLayout_surname"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout_name">
+
+                    <EditText
+                        android:id="@+id/editText_surname2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:hint="@string/str_surname2"
+                        android:textColorHint="@color/white_letter"
+                        android:inputType="textPersonName"
+                        tools:layout_editor_absoluteX="15dp"
+                        tools:layout_editor_absoluteY="344dp"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:text="@string/str_select_date"
+                    android:id="@+id/textViewDate"
+                    android:background="@color/colorPrimaryDark"
+                    android:textColor="@color/white_letter"
+                    android:gravity="center"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout_surname"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInputLayout_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewDate">
+
+                    <EditText
+                        android:id="@+id/editText_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:hint="@string/str_address"
+                        android:textColorHint="@color/white_letter"
+                        android:inputType="textPersonName"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInputLayout_postalCode"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout_address">
+
+                    <EditText
+                        android:id="@+id/editText_postalCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:textColorHint="@color/white_letter"
+                        android:hint="@string/str_postal_code"
+                        android:inputType="number"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInputLayout_city"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textInputLayout_postalCode"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout_address">
+
+                    <EditText
+                        android:id="@+id/editText_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:hint="@string/str_city"
+                        android:textColorHint="@color/white_letter"
+                        android:inputType="textPersonName"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/white_letter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout_postalCode">
+                    </TextView>
+                <Spinner
+                    android:id="@+id/spinner_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="62dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:entries="@array/phoneType"
+                    android:background="@color/design_default_color_primary_dark"
+                    android:textColor="@color/white_letter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout_postalCode"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInputLayout_phone"
+                    android:layout_width="149dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/spinner_phone"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout_city">
+
+                    <EditText
+                        android:id="@+id/editText_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:hint="@string/str_phone"
+                        android:textColorHint="@color/white_letter"
+                        android:inputType="number"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/btn_next"
+                    android:layout_width="61dp"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/button_selector"
+                    android:src="@drawable/arrow"
+
+                    android:text="@string/str_btn_next"
+                    android:textColor="@color/white_letter"
+                    android:textSize="@dimen/size_button_next"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.901"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner_phone"
+                    app:layout_constraintVertical_bias="0.0" />
+            </android.support.constraint.ConstraintLayout>
+        </ScrollView>
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>
